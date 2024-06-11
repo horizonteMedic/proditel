@@ -1,10 +1,46 @@
 @font-face {
-    font-family: 'Quantify';
-    src: url('fonts/Quantify.ttf') format('truetype'),
-         url('fonts/Quantify SemiBold.ttf') format('truetype');
-   
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
 }
 
 body {
-    font-family: 'Quantify', Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+h3,h2,h3 {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+
+p {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 13px; /* Tamaño de fuente para párrafos */
 }

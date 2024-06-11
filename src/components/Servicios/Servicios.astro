@@ -1,0 +1,71 @@
+<style>
+    .servicios-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px; /* Espacio arriba */
+    }
+
+    .servicios-cards {
+        display: flex;
+        flex-wrap: nowrap; 
+        overflow-x: auto; 
+        gap: 10px;
+    }
+
+    .servicio-card {
+        flex: 0 0 auto; 
+        width: 200px; 
+        height: 300px; /* Altura aumentada */
+        padding: 10px; /* Espacio interno en cada tarjeta */
+        background-color: #fff; /* Color de fondo de las tarjetas */
+        border-radius: 5px; /* Bordes redondeados */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        text-align: center; /* Centra el texto */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .servicio-card img {
+        width: auto; /* Ancho automático */
+        height: 100%; /* Altura 100% */
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+    }
+
+    h2 {
+        text-align: center; /* Centra el título */
+    }
+</style>
+
+<section>
+    <p class="mb-4 text-center px-2 py-2 mt-4" style="font-size: 25px;">Nuestros Servicios</p>
+    <div class="servicios-container">
+        <div class="servicios-cards">
+            <!-- Card 1 -->
+            <div class="servicio-card">
+                <img src="/img/server.jpg" alt="Servicio 1">
+                <p>Servicio 1</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="servicio-card">
+                <img src="/img/server.jpg" alt="Servicio 2">
+                <p>Servicio 2</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="servicio-card">
+                <img src="/img/server.jpg" alt="Servicio 3">
+                <p>Servicio 3</p>
+            </div>
+            <!-- Card 4 -->
+            <div class="servicio-card">
+                <img src="/img/server.jpg" alt="Servicio 4">
+                <p>Servicio 4</p>
+            </div>
+            <!-- Card 5 -->
+            <div class="servicio-card">
+                <img src="/img/server.jpg" alt="Servicio 5">
+                <p>Servicio 5</p>
+            </div>
+        </div>
+    </div>
+</section>
