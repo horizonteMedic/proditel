@@ -1,10 +1,10 @@
----
-const handleClick = () => {
-    window.location.href = 'https://wa.me/XXXXXXXXXX?text=Hola%20desde%20mi%20sitio%20web';
-};
----
+<script>
+    function handleClick() {
+        window.location.href = 'https://wa.me/XXXXXXXXXX?text=Hola%20desde%20mi%20sitio%20web';
+    }
+</script>
 
-<button class="floating-whatsapp-button" on:click={handleClick}>
+<button class="floating-whatsapp-button" onclick="handleClick()">
     <i class="fab fa-whatsapp"></i>
 </button>
 
