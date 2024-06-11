@@ -1,7 +1,3 @@
----
-title: "Banner"
----
-
 <style>
     .banner {
         width: 100%;
@@ -18,11 +14,33 @@ title: "Banner"
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.6); /* Color negro con opacidad del 50% */
-        
+        background-color: rgba(0, 0, 0, 0.6); /* Color negro con opacidad del 60% */
+        display: flex;
+        flex-direction: column; /* Apilar elementos verticalmente */
+        justify-content: center; /* Centrar horizontalmente */
+        align-items: center; /* Centrar verticalmente */
+    }
+
+    .text {
+        font-family: 'Roboto', sans-serif; /* Asegúrate de que la fuente esté disponible */
+        font-size: 6rem; /* Tamaño del texto */
+        font-weight: 900; /* Grosor del texto */
+        color: transparent; /* Texto transparente */
+        -webkit-text-stroke: 2px white; /* Contorno blanco de 2px */
+        letter-spacing: 2px; /* Espaciado entre letras */
+        text-align: center;
+    }
+
+    .description {
+        font-family: 'Montserrat', sans-serif; /* Asegúrate de que la fuente esté disponible */
+        color: white; /* Color del texto */
+        font-size: 20px;
     }
 </style>
 
 <div class="banner">
-    <div class="overlay"></div>
+    <div class="overlay">
+        <div class="text">PRODITEL</div>
+        <div class="description">Empresa especializada en soluciones integrales para tus necesidades tecnológicas.</div>
+    </div>
 </div>

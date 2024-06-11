@@ -1,0 +1,60 @@
+<style>
+
+    
+    .contact-button {
+    margin-top: 3em;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 999px;
+      color: white;
+      background: #144478;
+      position: relative;
+      overflow: hidden;
+      transition: background-color 0.4s;
+    }
+ 
+    .contact-button:hover:before {
+      left: 0;
+      
+    }
+    
+    .contact-button:hover {
+      background-color: #ff5000;
+      
+    }
+    
+    /* Separación entre letras para el texto "EXPERTS" */
+    .experts {
+      letter-spacing: 0.1em; 
+      line-height: 1em;
+      font-size: 60px;
+    }
+    .talk {
+      letter-spacing: 0.1em; 
+      font-size: 30px;
+    }
+    .contenido {
+      letter-spacing: 0.1rem; 
+      font-size: 17px;
+    }
+    </style>
+      <section class="bg-gray-100 py-8">
+        <div class="container mx-auto p-12">
+            <div class="max-w-4xl mx-auto bg-white rounded-lg overflow-hidden shadow-lg md:flex md:rounded-none md:border-none">
+                <div class="md:w-2/3 relative">
+                    <img src="/img/contactoimg.jpg" alt="Contacto" class="w-full h-auto md:h-full">
+                    <div class="absolute inset-0 bg-black opacity-50"></div>
+                </div>
+
+                <div class="md:w-2/3 p-6 md:p-4">
+                    <p class="talk ">TALK TO OUR
+                        <br><h1 class="experts">EXPERTS</h1></p>
+
+                    <p class="contenido mt-4">Contacta con nuestro equipo y descubre las tecnologías de vanguardia que potenciarán tu negocio.</p>
+                        
+                    <button type="submit" class="contact-button">Contáctanos <i class="fas fa-arrow-right ml-2"></i></button>
+                </div>
+            </div>
+        </div>
+      </section>
+    

@@ -6,19 +6,24 @@ import Footer from '../components/Footer/Footer.astro';
 import Clientes from '../components/Clientes/Clientes.astro';
 import FloatingWhatsAppButton from '../components/FloatingWhatsAppButton/FloatingWhatsAppButton.astro';
 import Servicios from '../components/Servicios/Servicios.astro';
+import Nuestroequipo from '../components/Nuestroequipo/Nuestroequipo.astro'
 import '../styles.css';
+import Contacto from '../components/Contacto/Contacto.astro';
 ---
 
 <Layout title="Proditel">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 		</style>
     <Header/>
     <Banners/>
 	<Servicios/>
-
+    <Nuestroequipo/>
     <Clientes/>
+	<Contacto/>
+
     <Footer/>
-    <FloatingWhatsAppButton/>
+    <!-- <FloatingWhatsAppButton/> -->
 </Layout>
