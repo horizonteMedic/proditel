@@ -1,0 +1,38 @@
+---
+const handleClick = () => {
+    window.location.href = 'https://wa.me/XXXXXXXXXX?text=Hola%20desde%20mi%20sitio%20web';
+};
+---
+
+<button class="floating-whatsapp-button" on:click={handleClick}>
+    <i class="fab fa-whatsapp"></i>
+</button>
+
+<style>
+    .floating-whatsapp-button {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        background-color: #25d366;
+        color: white;
+        padding: 1rem;
+        border-radius: 50%;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        width: 3.5rem;
+        height: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .floating-whatsapp-button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 15px 20px -3px rgba(0, 0, 0, 0.2), 0 6px 8px -2px rgba(0, 0, 0, 0.1);
+    }
+
+    .fab.fa-whatsapp {
+        font-size: 1.5rem;
+    }
+</style>

@@ -1,28 +1,45 @@
----
-console.log('a')
----
-
-<div class="w-full border-b">
-    <div class="flex px-5 py-4 items-center ">
-        <a href="/" class="w-auto">
-            <img src="img/logo.svg" alt="">
-        </a>
-        <div class="flex m-4">
-            <div class="m-2">
-                <p>Iniciativas</p>
-            </div>
-            <div class="m-2">
-                <p>Experiencia</p>
-            </div>
-            <div class="m-2">
-                <p>Tecnologia</p>
-            </div>
-            <div class="m-2">
-                <p>Servicios</p>
-            </div>
-            <div class="m-2">
-                <p>Implementacion</p>
-            </div>
-        </div>
-    </div>
-</div>
+<style>
+    .underline-animation::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background-color: white;
+      transition: width 0.3s;
+    }
+  
+    .underline-animation:hover::after {
+      width: 100%;
+    }
+  
+    .underline-animation {
+      cursor: pointer;
+    }
+  </style>
+  
+  <div class="w-full border-b bg-transparent fixed top-0 z-50 text-white">
+      <div class="flex justify-between items-center px-5 py-4">
+          <div class="flex items-center space-x-7">
+              <a href="/">
+                  <img src="/img/logo.svg" alt="">
+              </a>
+              <div class="mr-2 font-bold text-xs underline-animation" style="text-transform: uppercase; letter-spacing: 3px;">
+                  <p>Iniciativas</p>
+              </div>
+              <div class="mr-2 font-bold text-xs underline-animation" style="text-transform: uppercase; letter-spacing: 3px;">
+                  <p>Experiencia</p>
+              </div>
+              <div class="mr-2 font-bold text-xs underline-animation" style="text-transform: uppercase; letter-spacing: 3px;">
+                  <p>Tecnología</p>
+              </div>
+              <div class="mr-2 font-bold text-xs underline-animation" style="text-transform: uppercase; letter-spacing: 3px;">
+                  <p>Servicios</p>
+              </div>
+              <div class="mr-2 font-bold text-xs underline-animation" style="text-transform: uppercase; letter-spacing: 3px;">
+                  <p>Implementación</p>
+              </div>
+          </div>
+          <button style="background-color: #ff5000; color: white; padding: 8px 16px; border-radius: 9999px; text-transform: uppercase; font-size: 10px; letter-spacing: 3px;">Contáctanos</button>
+      </div>
+  </div>
+  
