@@ -2,6 +2,8 @@
     .servicios-container {
         display: flex;
         justify-content: center;
+        align-items: center; /* Centra el contenido verticalmente */
+        height: 70vh; /* Altura del 70% del viewport */
         margin-top: 20px; /* Espacio arriba */
     }
 
@@ -9,62 +11,97 @@
         display: flex;
         flex-wrap: nowrap; 
         overflow-x: auto; 
-        gap: 10px;
+        gap: 20px; /* Aumenta el espacio entre las tarjetas */
     }
 
     .servicio-card {
+        position: relative; /* Necesario para posicionar el overlay */
         flex: 0 0 auto; 
         width: 200px; 
         height: 300px; /* Altura aumentada */
-        padding: 10px; /* Espacio interno en cada tarjeta */
-        background-color: #fff; /* Color de fondo de las tarjetas */
-        border-radius: 5px; /* Bordes redondeados */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
-        text-align: center; /* Centra el texto */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+        margin-right: 20px; /* Espacio entre las imágenes */
     }
 
     .servicio-card img {
-        width: auto; /* Ancho automático */
-        height: 100%; /* Altura 100% */
-        margin: 0 auto; /* Centra la imagen horizontalmente */
+        width: 100%; /* Ancho completo */
+        height: 100%; /* Altura completa */
+        object-fit: cover; /* Ajuste de imagen */
+        transition: opacity 0.3s ease; /* Transición suave para la opacidad */
     }
 
-    h2 {
-        text-align: center; /* Centra el título */
+    .overlay {
+        position: absolute; /* Posicionamiento absoluto */
+        bottom: -100%; /* Inicia fuera de la vista desde abajo */
+        left: 0; /* Alinéa al borde izquierdo */
+        width: 100%; /* Ancho completo */
+        height: 100%; /* Altura completa */
+        background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+        color: #fff; /* Texto blanco */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0; /* Inicialmente invisible */
+        transition: opacity 0.5s ease, bottom 0.5s ease; /* Transición suave para la opacidad y posición */
+        text-align: center;
+        padding: 10px; /* Espacio interno para el texto */
     }
+
+    .servicio-card:hover img {
+        opacity: 0.3; /* Reduce la opacidad de la imagen al pasar el cursor */
+    }
+
+    .servicio-card:hover .overlay {
+        opacity: 1; /* Muestra el overlay al pasar el cursor */
+        bottom: 0; /* Desplaza el overlay hacia arriba */
+    }
+	p {
+      letter-spacing: 0.1em; 
+      font-size: 12px;
+      font-weight: 900;
+    }
+   
 </style>
 
 <section>
-    <p class="mb-4 text-center px-2 py-2 mt-4" style="font-size: 25px;">Nuestros Servicios</p>
+
+    <p class="text-lg font-semibold mt-4 ml-5 mb-4 text-center px-2 py-2 " style="font-size: 25px;">NUESTROS SERVICIOS</p>
     <div class="servicios-container">
         <div class="servicios-cards">
             <!-- Card 1 -->
             <div class="servicio-card">
                 <img src="/img/server.jpg" alt="Servicio 1">
-                <p>Servicio 1</p>
+                <div class="overlay">
+                    <p>Servicio Nombre</p>
+                </div>
             </div>
             <!-- Card 2 -->
             <div class="servicio-card">
                 <img src="/img/server.jpg" alt="Servicio 2">
-                <p>Servicio 2</p>
+                <div class="overlay">
+                    <p>Servicio Nombre</p>
+                </div>
             </div>
             <!-- Card 3 -->
             <div class="servicio-card">
                 <img src="/img/server.jpg" alt="Servicio 3">
-                <p>Servicio 3</p>
+                <div class="overlay">
+                    <p>Servicio Nombre</p>
+                </div>
             </div>
             <!-- Card 4 -->
             <div class="servicio-card">
                 <img src="/img/server.jpg" alt="Servicio 4">
-                <p>Servicio 4</p>
+                <div class="overlay">
+                    <p>Servicio Nombre</p>
+                </div>
             </div>
             <!-- Card 5 -->
             <div class="servicio-card">
                 <img src="/img/server.jpg" alt="Servicio 5">
-                <p>Servicio 5</p>
+                <div class="overlay">
+                    <p>Servicio Nombre</p>
+                </div>
             </div>
         </div>
     </div>
