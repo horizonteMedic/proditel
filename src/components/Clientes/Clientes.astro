@@ -1,32 +1,91 @@
-<div class="mb-2 p-8">
-  <p class="mb-4 text-center px-2 py-2" style="font-size: 25px;">Nuestros clientes</p>
-  <div class="grid grid-cols-6 gap-4">
-      <div class="bg-white p-4 border border-gray-200 shadow-sm rounded-lg">
-          <img src="/img/santander.png" alt="Santander" class="mx-auto" />
-      </div>
-      <div class="bg-white p-4 border border-gray-200 shadow-sm rounded-lg">
-          <img src="/img/santander.png" alt="Santander" class="mx-auto" />
-      </div>
-      <div class="bg-white p-4 border border-gray-200 shadow-sm rounded-lg">
-          <img src="/img/santander.png" alt="Santander" class="mx-auto" />
-      </div>
-      <div class="bg-white p-4 border border-gray-200 shadow-sm rounded-lg">
-          <img src="/img/santander.png" alt="Santander" class="mx-auto" />
-      </div>
-      <div class="bg-white p-4 border border-gray-200 shadow-sm rounded-lg">
-          <img src="/img/santander.png" alt="Santander" class="mx-auto" />
-      </div>
-      <div class="bg-white p-4 border border-gray-200 shadow-sm rounded-lg">
-          <img src="/img/santander.png" alt="Santander" class="mx-auto" />
-      </div>
-      <div class="bg-white p-4 border border-gray-200 shadow-sm rounded-lg">
-        <img src="/img/santander.png" alt="Santander" class="mx-auto" />
+<style>
+    .cliente-logo {
+      display: inline-block;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+  
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 120px; /* Tamaño deseado */
+      height: 100px; /* Tamaño deseado */
+      overflow: hidden; /* Para recortar imágenes más grandes */
+    }
+  
+    .logo-img {
+      max-width: 100%;
+      max-height: 100%;
+      filter: grayscale(100%); /* Imágenes en blanco y negro por defecto */
+      transition: filter 0.3s ease;
+    }
+  
+    .logo-container:hover .logo-img {
+      filter: grayscale(0%); /* Imágenes a color al hacer hover */
+    }
+    .title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-container p {
+  color: black; /* Color del texto */
+  font-size: 1.5rem; /* Tamaño de fuente relativo */
+  padding-left: 1.5rem; /* Espacio adicional a la izquierda para la línea */
+  border-left: 5px solid #ff5100; /* Línea azul a la izquierda */
+  text-align: center; /* Centrar el texto */
+  font-weight: 500;
+}
+
+  </style>
+  
+  <div class="mb-2 p-8">
+    <div class="title-container">
+        <p class="text-lg">CLIENTES</p>
+        <div class="orange-line"></div>
     </div>
-    <div class="bg-white p-4 border border-gray-200 shadow-sm rounded-lg">
-        <img src="/img/santander.png" alt="Santander" class="mx-auto" />
-    </div>
-    <div class="bg-white p-4 border border-gray-200 shadow-sm rounded-lg">
-        <img src="/img/santander.png" alt="Santander" class="mx-auto" />
+    <div class="text-center">
+      <div class="cliente-logo">
+        <div class="logo-container">
+          <img src="/img/santander.png" alt="Santander" class="logo-img" />
+        </div>
+      </div>
+      <div class="cliente-logo">
+        <div class="logo-container">
+          <img src="/img/santander.png" alt="Santander" class="logo-img" />
+        </div>
+      </div>
+      <div class="cliente-logo">
+        <div class="logo-container">
+          <img src="/img/santander.png" alt="Santander" class="logo-img" />
+        </div>
+      </div>
+      <div class="cliente-logo">
+        <div class="logo-container">
+          <img src="/img/santander.png" alt="Santander" class="logo-img" />
+        </div>
+      </div>   <div class="cliente-logo">
+        <div class="logo-container">
+          <img src="/img/santander.png" alt="Santander" class="logo-img" />
+        </div>
+      </div>
+      <div class="cliente-logo">
+        <div class="logo-container">
+          <img src="/img/santander.png" alt="Santander" class="logo-img" />
+        </div>
+      </div>   <div class="cliente-logo">
+        <div class="logo-container">
+          <img src="/img/santander.png" alt="Santander" class="logo-img" />
+        </div>
+      </div>
+      <div class="cliente-logo">
+        <div class="logo-container">
+          <img src="/img/santander.png" alt="Santander" class="logo-img" />
+        </div>
+      </div>
+      <!-- Repite esto para más imágenes -->
     </div>
   </div>
-</div>
+  

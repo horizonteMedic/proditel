@@ -2,106 +2,120 @@
     .servicios-container {
         display: flex;
         justify-content: center;
-        align-items: center; /* Centra el contenido verticalmente */
-        height: 70vh; /* Altura del 70% del viewport */
-        margin-top: 20px; /* Espacio arriba */
+        align-items: center;
+        height: 90vh;
     }
 
     .servicios-cards {
         display: flex;
-        flex-wrap: nowrap; 
-        overflow-x: auto; 
-        gap: 20px; /* Aumenta el espacio entre las tarjetas */
+        flex-wrap: wrap;
+        gap: 20px;
+        max-width: 80%;
     }
 
     .servicio-card {
-        position: relative; /* Necesario para posicionar el overlay */
-        flex: 0 0 auto; 
-        width: 200px; 
-        height: 300px; /* Altura aumentada */
-        overflow: hidden; /* Oculta cualquier contenido que sobresalga */
-        margin-right: 20px; /* Espacio entre las imágenes */
+        position: relative;
+        flex: 0 0 calc(25% - 20px);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .servicio-card img {
-        width: 100%; /* Ancho completo */
-        height: 100%; /* Altura completa */
-        object-fit: cover; /* Ajuste de imagen */
-        transition: opacity 0.3s ease; /* Transición suave para la opacidad */
+        width: 100%;
+        display: block;
     }
 
-    .overlay {
-        position: absolute; /* Posicionamiento absoluto */
-        bottom: -100%; /* Inicia fuera de la vista desde abajo */
-        left: 0; /* Alinéa al borde izquierdo */
-        width: 100%; /* Ancho completo */
-        height: 100%; /* Altura completa */
-        background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
-        color: #fff; /* Texto blanco */
+    .linea-naranja {
+        width: 100%;
+        height: 4px;
+        background-color: #ff5100;
+    }
+
+    .nombre-card {
+        width: 100%;
+        background-color: #eceff7;
+        font-size: 13px; /* Tamaño de fuente relativo */
+        text-align: justify; /* Justificar el texto */
+        font-weight: 500;
+        padding: 1em;
+    }
+
+    .title-container {
         display: flex;
-        justify-content: center;
         align-items: center;
-        opacity: 0; /* Inicialmente invisible */
-        transition: opacity 0.5s ease, bottom 0.5s ease; /* Transición suave para la opacidad y posición */
-        text-align: center;
-        padding: 10px; /* Espacio interno para el texto */
+        justify-content: center;
+        position: relative;
+        margin-top: 2em;
     }
 
-    .servicio-card:hover img {
-        opacity: 0.3; /* Reduce la opacidad de la imagen al pasar el cursor */
+    .title-container p {
+        color: black; /* Color del texto */
+        font-size: 1.5rem; /* Tamaño de fuente relativo */
+        padding-left: 1.5rem; /* Espacio adicional a la izquierda para la línea */
+        border-left: 5px solid #ff5100; /* Línea azul a la izquierda */
+        text-align: justify; /* Justificar el texto */
+        font-weight: 500;
     }
 
-    .servicio-card:hover .overlay {
-        opacity: 1; /* Muestra el overlay al pasar el cursor */
-        bottom: 0; /* Desplaza el overlay hacia arriba */
-    }
-	p {
-      letter-spacing: 0.1em; 
-      font-size: 12px;
-      font-weight: 900;
-    }
-   
+  
 </style>
 
 <section>
-
-    <p class="text-lg font-semibold mt-4 ml-5 mb-4 text-center px-2 py-2 " style="font-size: 25px;">NUESTROS SERVICIOS</p>
+    <div class="title-container">
+        <p class="text-lg">NUESTROS SERVICIOS</p>
+        <div class="orange-line"></div>
+    </div>
     <div class="servicios-container">
         <div class="servicios-cards">
             <!-- Card 1 -->
             <div class="servicio-card">
                 <img src="/img/server.jpg" alt="Servicio 1">
-                <div class="overlay">
-                    <p>Servicio Nombre</p>
-                </div>
+                <div class="linea-naranja"></div>
+                <div class="nombre-card">Nombre 1</div>
             </div>
             <!-- Card 2 -->
             <div class="servicio-card">
                 <img src="/img/server.jpg" alt="Servicio 2">
-                <div class="overlay">
-                    <p>Servicio Nombre</p>
-                </div>
+                <div class="linea-naranja"></div>
+                <div class="nombre-card">Nombre 2</div>
             </div>
             <!-- Card 3 -->
             <div class="servicio-card">
                 <img src="/img/server.jpg" alt="Servicio 3">
-                <div class="overlay">
-                    <p>Servicio Nombre</p>
-                </div>
+                <div class="linea-naranja"></div>
+                <div class="nombre-card">Nombre 3</div>
             </div>
             <!-- Card 4 -->
             <div class="servicio-card">
                 <img src="/img/server.jpg" alt="Servicio 4">
-                <div class="overlay">
-                    <p>Servicio Nombre</p>
-                </div>
+                <div class="linea-naranja"></div>
+                <div class="nombre-card">Nombre 4</div>
             </div>
             <!-- Card 5 -->
             <div class="servicio-card">
                 <img src="/img/server.jpg" alt="Servicio 5">
-                <div class="overlay">
-                    <p>Servicio Nombre</p>
-                </div>
+                <div class="linea-naranja"></div>
+                <div class="nombre-card">Nombre 5</div>
+            </div>
+            <!-- Card 6 -->
+            <div class="servicio-card">
+                <img src="/img/server.jpg" alt="Servicio 6">
+                <div class="linea-naranja"></div>
+                <div class="nombre-card">Nombre 6</div>
+            </div>
+            <!-- Card 7 -->
+            <div class="servicio-card">
+                <img src="/img/server.jpg" alt="Servicio 7">
+                <div class="linea-naranja"></div>
+                <div class="nombre-card">Nombre 7</div>
+            </div>
+            <!-- Card 8 -->
+            <div class="servicio-card">
+                <img src="/img/server.jpg" alt="Servicio 8">
+                <div class="linea-naranja"></div>
+                <div class="nombre-card">Nombre 8</div>
             </div>
         </div>
     </div>
