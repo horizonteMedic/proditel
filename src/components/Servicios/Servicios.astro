@@ -3,27 +3,38 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 90vh;
+        height: 80vh;
+        padding: 0 40px; /* Agregar padding a los costados */
     }
 
     .servicios-cards {
         display: flex;
-        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-wrap: nowrap; /* No permitir el ajuste de línea */
         gap: 20px;
-        max-width: 80%;
+        max-width: 100%;
     }
 
     .servicio-card {
         position: relative;
-        flex: 0 0 calc(25% - 20px);
+        flex: 0 0 calc(20% - 20px);
         overflow: hidden;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .servicio-card img {
+    .card-content {
+        padding: 1em;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servicio-card img {
+        width: 100%; /* Ajustar el ancho de la imagen */
+        height: 250px; /* Ajustar la altura de la imagen */
         display: block;
     }
 
@@ -32,14 +43,30 @@
         height: 4px;
         background-color: #ff5100;
     }
+    
+    .linea-azul {
+        width: 100%;
+        height: 4px;
+        background-color: #144478;
+    }
 
     .nombre-card {
         width: 100%;
         background-color: #eceff7;
-        font-size: 13px; /* Tamaño de fuente relativo */
+        font-size: 16px; /* Tamaño de fuente relativo */
         text-align: justify; /* Justificar el texto */
-        font-weight: 500;
-        padding: 1em;
+        font-weight: 800;
+        padding: 2em;
+        color: white;
+    }
+
+    /* Colores para cada card */
+    .servicio-card:nth-child(odd) .nombre-card {
+        background-color: #144478; /* Rojo */
+    }
+
+    .servicio-card:nth-child(even) .nombre-card {
+        background-color: #ff5000; /* Azul */
     }
 
     .title-container {
@@ -57,12 +84,10 @@
         border-left: 5px solid #ff5100; /* Línea azul a la izquierda */
         text-align: justify; /* Justificar el texto */
         font-weight: 500;
+        
     }
-
-  
 </style>
-
-<section>
+<section id="servicios">
     <div class="title-container">
         <p class="text-lg">NUESTROS SERVICIOS</p>
         <div class="orange-line"></div>
@@ -71,51 +96,43 @@
         <div class="servicios-cards">
             <!-- Card 1 -->
             <div class="servicio-card">
-                <img src="/img/server.jpg" alt="Servicio 1">
-                <div class="linea-naranja"></div>
-                <div class="nombre-card">Nombre 1</div>
+                <div class="card-content">
+                    <div class="nombre-card">Desarrollo de <br> Software</div>
+                    <div class="linea-naranja"></div>
+                    <img src="/img/soft.png" alt="Servicio 1">
+                </div>
             </div>
             <!-- Card 2 -->
             <div class="servicio-card">
-                <img src="/img/server.jpg" alt="Servicio 2">
-                <div class="linea-naranja"></div>
-                <div class="nombre-card">Nombre 2</div>
+                <div class="card-content">
+                    <div class="nombre-card">Controles de <br> Acceso</div>
+                    <div class="linea-azul"></div>
+                    <img src="/img/camaras.jpg" alt="Servicio 2">
+                </div>
             </div>
             <!-- Card 3 -->
             <div class="servicio-card">
-                <img src="/img/server.jpg" alt="Servicio 3">
-                <div class="linea-naranja"></div>
-                <div class="nombre-card">Nombre 3</div>
+                <div class="card-content">
+                    <div class="nombre-card">Implementación de <br> Servidores</div>
+                    <div class="linea-naranja"></div>
+                    <img src="/img/server.jpg" alt="Servicio 3">
+                </div>
             </div>
             <!-- Card 4 -->
             <div class="servicio-card">
-                <img src="/img/server.jpg" alt="Servicio 4">
-                <div class="linea-naranja"></div>
-                <div class="nombre-card">Nombre 4</div>
+                <div class="card-content">
+                    <div class="nombre-card">Centros <br> de monitoreo CCTV</div>
+                    <div class="linea-azul"></div>
+                    <img src="/img/monitoreo.jpg" alt="Servicio 4">
+                </div>
             </div>
             <!-- Card 5 -->
             <div class="servicio-card">
-                <img src="/img/server.jpg" alt="Servicio 5">
-                <div class="linea-naranja"></div>
-                <div class="nombre-card">Nombre 5</div>
-            </div>
-            <!-- Card 6 -->
-            <div class="servicio-card">
-                <img src="/img/server.jpg" alt="Servicio 6">
-                <div class="linea-naranja"></div>
-                <div class="nombre-card">Nombre 6</div>
-            </div>
-            <!-- Card 7 -->
-            <div class="servicio-card">
-                <img src="/img/server.jpg" alt="Servicio 7">
-                <div class="linea-naranja"></div>
-                <div class="nombre-card">Nombre 7</div>
-            </div>
-            <!-- Card 8 -->
-            <div class="servicio-card">
-                <img src="/img/server.jpg" alt="Servicio 8">
-                <div class="linea-naranja"></div>
-                <div class="nombre-card">Nombre 8</div>
+                <div class="card-content">
+                    <div class="nombre-card">Enlaces de <br> fibra óptica</div>
+                    <div class="linea-naranja"></div>
+                    <img src="/img/fibra.jpg" alt="Servicio 5">
+                </div>
             </div>
         </div>
     </div>
